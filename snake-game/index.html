@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>贪吃蛇小游戏</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="score-panel" aria-label="游戏状态">
+        <div>
+          <p class="eyebrow">Snake Arcade</p>
+          <h1>贪吃蛇</h1>
+        </div>
+        <div class="stats">
+          <div>
+            <span>分数</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span>最高分</span>
+            <strong id="bestScore">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="play-area" aria-label="贪吃蛇游戏">
+        <canvas id="board" width="504" height="504" aria-label="游戏棋盘"></canvas>
+        <div class="game-message" id="message">
+          <strong>按空格开始</strong>
+          <span>方向键或 WASD 控制移动</span>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="游戏控制">
+        <div class="actions">
+          <button id="startButton" type="button">开始</button>
+          <button id="pauseButton" type="button">暂停</button>
+          <button id="restartButton" type="button">重开</button>
+        </div>
+        <div class="pad" aria-label="触屏方向控制">
+          <button type="button" data-direction="up" aria-label="向上">↑</button>
+          <button type="button" data-direction="left" aria-label="向左">←</button>
+          <button type="button" data-direction="right" aria-label="向右">→</button>
+          <button type="button" data-direction="down" aria-label="向下">↓</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
