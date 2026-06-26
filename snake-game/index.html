@@ -3,33 +3,46 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>贪吃蛇小游戏</title>
+    <title>糖果蛇乐园</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="sparkles" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <main class="game-shell">
-      <section class="score-panel" aria-label="游戏状态">
-        <div>
-          <p class="eyebrow">Snake Arcade</p>
-          <h1>贪吃蛇</h1>
+      <section class="hero-panel" aria-label="游戏状态">
+        <div class="title-block">
+          <p class="eyebrow">Candy Snake Arcade</p>
+          <h1>糖果蛇乐园</h1>
+          <p class="intro">彩虹蛇在果冻迷宫里收集水果，别撞到墙和自己。</p>
         </div>
+
         <div class="stats">
-          <div>
+          <div class="stat-card">
             <span>分数</span>
             <strong id="score">0</strong>
           </div>
-          <div>
+          <div class="stat-card">
             <span>最高分</span>
             <strong id="bestScore">0</strong>
           </div>
         </div>
       </section>
 
-      <section class="play-area" aria-label="贪吃蛇游戏">
-        <canvas id="board" width="504" height="504" aria-label="游戏棋盘"></canvas>
-        <div class="game-message" id="message">
-          <strong>按空格开始</strong>
-          <span>方向键或 WASD 控制移动</span>
+      <section class="play-card" aria-label="贪吃蛇游戏">
+        <div class="board-frame">
+          <canvas id="board" width="504" height="504" aria-label="游戏棋盘"></canvas>
+          <div class="game-message" id="message">
+            <strong>按空格开始</strong>
+            <span>方向键或 WASD 控制移动</span>
+          </div>
         </div>
       </section>
 
@@ -39,6 +52,7 @@
           <button id="pauseButton" type="button">暂停</button>
           <button id="restartButton" type="button">重开</button>
         </div>
+
         <div class="pad" aria-label="触屏方向控制">
           <button type="button" data-direction="up" aria-label="向上">↑</button>
           <button type="button" data-direction="left" aria-label="向左">←</button>
